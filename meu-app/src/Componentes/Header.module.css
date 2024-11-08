@@ -16,3 +16,20 @@ header {
     color: white;
     flex-direction: column;
 }
+
+i {
+    display: flex;
+    font-size: 2rem; 
+    color: white; 
+    margin: 2%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+}
+
+.button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}

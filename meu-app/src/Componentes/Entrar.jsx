@@ -13,6 +13,10 @@ export function Entrar(){
     const navigate = useNavigate();
     // const location = useLocation();
 
+    const navigateCriar = () => {
+        navigate('/NovoUsuario');
+    }
+
     useEffect ( () => {
         localStorage.removeItem('token');
     })
@@ -31,7 +35,7 @@ export function Entrar(){
             const token = tokenResponse.data.access;
             console.log(tokenResponse.data.access);
             localStorage.setItem('token', token);
-            navigate('/CsvUploadform.jsx');
+            navigate('/Home.jsx');
         }catch(error){
             console.error(error)
             alert("Usuario não identificado!")
@@ -64,7 +68,7 @@ export function Entrar(){
                         required/>
                 </div>
                 <button type='submit'>Login</button>
-                <p className={estilos.signup}>Faça seu <a href="">Cadastro</a></p>
+                <p className={estilos.signup}>Faça seu <a onClick={navigateCriar}>Cadastro</a></p>
             </form>
         </div>
     )

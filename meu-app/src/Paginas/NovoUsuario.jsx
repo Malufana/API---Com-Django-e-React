@@ -1,13 +1,13 @@
 import { Header } from '../Componentes/Header';
 import { BarraNavegacao } from '../Componentes/BarraNavegacao';
-import { CorpoPrincipal } from '../Componentes/CorpoPrincipal';
+import { Cadastro } from '../Componentes/Cadastro';
 
-export function Home(){
+export function NovoUsuario(){
     return(
         <>
         <Header/>
         <BarraNavegacao/>
-        <CorpoPrincipal/>
+        <Cadastro/>
         </>
     )
 }
