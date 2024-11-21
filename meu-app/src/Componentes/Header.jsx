@@ -13,15 +13,28 @@ export function Header(){
         navigate('/Login');
     }
 
+    const navigateUpload = () =>{
+        navigate('/CsvUploadForm');
+    }
+
     return(
         <header>
             <button onClick={navigateHome} className={estilos.button}>
                 <i class="bi bi-house"></i>
             </button>
             
+            <button onClick={navigateUpload} className={estilos.button}>
+                <i class="bi bi-upload"></i>
+            </button>
+
             <div className={estilos.logo}>
                 <h1>Sensores</h1>
             </div>
+
+            <button className={estilos.button}>
+                <i class="bi bi-bar-chart-line"></i>
+            </button>
+
             <button onClick={navigateLogin} className={estilos.button}>
                 <i class="bi bi-person"></i>
             </button>

@@ -35,7 +35,7 @@ export function Entrar(){
             const token = tokenResponse.data.access;
             console.log(tokenResponse.data.access);
             localStorage.setItem('token', token);
-            navigate('/Home.jsx');
+            navigate('/');
         }catch(error){
             console.error(error)
             alert("Usuario não identificado!")

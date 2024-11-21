@@ -1,13 +1,13 @@
 import { Header } from '../Componentes/Header';
 import { BarraNavegacao } from '../Componentes/BarraNavegacao';
-import { CorpoPrincipal } from '../Componentes/CorpoPrincipal';
+import { TabelaLuminosidade } from '../Componentes/TabelaLuminosidade';
 
-export function Home(){
+export function Luminosidade(){
     return(
         <>
             <Header/>
             <BarraNavegacao/>
-            <CorpoPrincipal/>
+            <TabelaLuminosidade/>
         </>
     )
 }

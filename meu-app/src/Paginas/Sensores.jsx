@@ -1,13 +1,13 @@
 import { Header } from '../Componentes/Header';
 import { BarraNavegacao } from '../Componentes/BarraNavegacao';
-import { CorpoPrincipal } from '../Componentes/CorpoPrincipal';
+import { TabelaSensores } from '../Componentes/TabelaSensores';
 
-export function Home(){
+export function Sensores(){
     return(
         <>
             <Header/>
             <BarraNavegacao/>
-            <CorpoPrincipal/>
+            <TabelaSensores/>
         </>
     )
 }

@@ -1,13 +1,14 @@
 import estilos from './BarraNavegacao.module.css';
 
 export function BarraNavegacao(){
+
     return(
         <nav className={estilos.navbar}>
-            <a href="">Temperatura</a>
-            <a href="">Umidade</a> 
-            <a href="">Luminosidade</a>
-            <a href="">Sensores</a>
-            <a href="">Contador</a>
+            <a href="/Sensores">Sensores</a>
+            <a href="/Temperatura" >Temperatura</a>
+            <a href="/Umidade">Umidade</a> 
+            <a href="/Luminosidade">Luminosidade</a>
+            <a href="/Contador">Contador</a>
         </nav>
     )
 }

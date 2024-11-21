@@ -1,13 +1,13 @@
 import { Header } from '../Componentes/Header';
 import { BarraNavegacao } from '../Componentes/BarraNavegacao';
-import { CorpoPrincipal } from '../Componentes/CorpoPrincipal';
+import { TabelaContador } from '../Componentes/TabelaContador';
 
-export function Home(){
+export function Contador(){
     return(
         <>
             <Header/>
             <BarraNavegacao/>
-            <CorpoPrincipal/>
+            <TabelaContador/>
         </>
     )
 }

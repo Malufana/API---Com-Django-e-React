@@ -25,21 +25,25 @@ class CSVFileUploadSerializer(serializers.Serializer):
     file = serializers.FileField(required=True)
 
 class TemperaturaDataSerliazer(serializers.ModelSerializer):
+    sensor_id = serializers.PrimaryKeyRelatedField(source='sensor', read_only=True)
     class Meta:
         model = TemperaturaData
         fields = '__all__'
 
 class UmidadeDataSerializer(serializers.ModelSerializer):
+    sensor_id = serializers.PrimaryKeyRelatedField(source='sensor', read_only=True)
     class Meta:
         model = UmidadeData
         fields = '__all__'
 
 class LuminosidadeDataSerializer(serializers.ModelSerializer):
+    sensor_id = serializers.PrimaryKeyRelatedField(source='sensor', read_only=True)
     class Meta:
         model = LuminosidadeData
         fields = '__all__'
 
 class ContadorDataSerializer(serializers.ModelSerializer):
+    sensor_id = serializers.PrimaryKeyRelatedField(source='sensor', read_only=True)
     class Meta:
         model = ContadorData
         fields = '__all__'

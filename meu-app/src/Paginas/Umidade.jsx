@@ -1,13 +1,13 @@
 import { Header } from '../Componentes/Header';
 import { BarraNavegacao } from '../Componentes/BarraNavegacao';
-import { CorpoPrincipal } from '../Componentes/CorpoPrincipal';
+import { TabelaUmidade } from '../Componentes/TabelaUmidade';
 
-export function Home(){
+export function Umidade(){
     return(
         <>
             <Header/>
             <BarraNavegacao/>
-            <CorpoPrincipal/>
+            <TabelaUmidade/>
         </>
     )
 }

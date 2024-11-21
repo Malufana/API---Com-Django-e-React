@@ -1,13 +1,13 @@
 import { Header } from '../Componentes/Header';
 import { BarraNavegacao } from '../Componentes/BarraNavegacao';
-import { CorpoPrincipal } from '../Componentes/CorpoPrincipal';
+import { TabelaTemperatura } from '../Componentes/TabelaTemperatura';
 
-export function Home(){
+export function Temperatura(){
     return(
         <>
             <Header/>
             <BarraNavegacao/>
-            <CorpoPrincipal/>
+            <TabelaTemperatura/>
         </>
     )
 }
