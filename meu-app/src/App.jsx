@@ -1,7 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
 import { Login } from './Paginas/Login';
-import CsvUploadForm from './CsvUploadForm';
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { NovoUsuario } from './Paginas/NovoUsuario';
@@ -11,6 +10,8 @@ import { Umidade } from './Paginas/Umidade';
 import { Luminosidade } from './Paginas/Luminosidade';
 import { Sensores } from './Paginas/Sensores';
 import { Contador } from './Paginas/Contador';
+import { EnviarArquivos } from './Paginas/EnviarArquivos';
+import { VisualizacaoDados } from './Paginas/VisualizacaoDados';
 
 const App = () => {
   return (
@@ -23,8 +24,9 @@ const App = () => {
         <Route path='/Luminosidade' element={<Luminosidade/>}/>
         <Route path='/Sensores' element={<Sensores/>}/>
         <Route path='/Contador' element={<Contador/>}/>
-        <Route path='/CsvUploadForm' element={<CsvUploadForm />}/>
+        <Route path='/EnviarArquivos' element={<EnviarArquivos />}/>
         <Route path='/Novousuario' element={<NovoUsuario />}/>
+        <Route path='/VisualizacaoDados' element={<VisualizacaoDados/>}/>
       </Routes>
     </BrowserRouter>
   );

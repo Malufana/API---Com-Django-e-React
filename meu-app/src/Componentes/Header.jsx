@@ -14,7 +14,11 @@ export function Header(){
     }
 
     const navigateUpload = () =>{
-        navigate('/CsvUploadForm');
+        navigate('/EnviarArquivos');
+    }
+
+    const navigateDados = () => {
+        navigate('/VisualizacaoDados');
     }
 
     return(
@@ -31,7 +35,7 @@ export function Header(){
                 <h1>Sensores</h1>
             </div>
 
-            <button className={estilos.button}>
+            <button onClick={navigateDados} className={estilos.button}>
                 <i class="bi bi-bar-chart-line"></i>
             </button>
 
