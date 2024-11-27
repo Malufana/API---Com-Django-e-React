@@ -48,26 +48,28 @@ export function TabelaTemperatura(){
     return(
         <div>
             <h1 className={estilos.h1}>TEMPERATURA</h1>
-            <table className={estilos.tabela}>
-                <thead>
-                    <tr className={estilos.cabecalho}>
-                        <th>ID</th>
-                        <th>VALOR</th>
-                        <th>SENSOR_ID</th>
-                        <th>TIMESTAMP</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {temperatura.map((temp) => (
-                    <tr key={temp.id} className={estilos.linha}>
-                        <td>{temp.id}</td>
-                        <td>{temp.valor}</td>
-                        <td>{temp.sensor_id}</td>
-                        <td>{temp.timestamp}</td>
-                    </tr>
-                    ))}
-                </tbody>
-            </table>
+            <div className={estilos.rolagem}>
+                <table className={estilos.tabela}>
+                    <thead>
+                        <tr className={estilos.cabecalho}>
+                            <th>ID</th>
+                            <th>VALOR</th>
+                            <th>SENSOR_ID</th>
+                            <th>TIMESTAMP</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {temperatura.map((temp) => (
+                        <tr key={temp.id} className={estilos.linha}>
+                            <td>{temp.id}</td>
+                            <td>{temp.valor}</td>
+                            <td>{temp.sensor_id}</td>
+                            <td>{temp.timestamp}</td>
+                        </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
         </div>
     )
 }

@@ -48,24 +48,26 @@ export function TabelaContador(){
     return(
         <div>
             <h1 className={estilos.h1}>CONTADOR</h1>
-            <table className={estilos.tabela}>
-                <thead>
-                    <tr className={estilos.cabecalho}>
-                        <th>ID</th>
-                        <th>SENSOR_ID</th>
-                        <th>TIMESTAMP</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {contador.map((cont) => (
-                    <tr key={cont.id} className={estilos.linha}>
-                        <td>{cont.id}</td>
-                        <td>{cont.sensor_id}</td>
-                        <td>{cont.timestamp}</td>
-                    </tr>
-                    ))}
-                </tbody>
-            </table>
+            <div className={estilos.rolagem}>
+                <table className={estilos.tabela}>
+                    <thead>
+                        <tr className={estilos.cabecalho}>
+                            <th>ID</th>
+                            <th>SENSOR_ID</th>
+                            <th>TIMESTAMP</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {contador.map((cont) => (
+                        <tr key={cont.id} className={estilos.linha}>
+                            <td>{cont.id}</td>
+                            <td>{cont.sensor_id}</td>
+                            <td>{cont.timestamp}</td>
+                        </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
         </div>
     )
 }

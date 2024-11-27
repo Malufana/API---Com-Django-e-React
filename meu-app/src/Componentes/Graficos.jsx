@@ -1,11 +1,14 @@
 import React, { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
-import { Chart, LineController, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
+import { Chart, LineController, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, BarElement, ArcElement } from 'chart.js';
 import estilos from './TabelaTemperatura.module.css';
 import { Line } from 'react-chartjs-2';
 import { Bar } from 'react-chartjs-2';
+import { Doughnut } from 'react-chartjs-2';
+import { Bubble } from 'react-chartjs-2';
+import { Scatter } from 'react-chartjs-2';
 
-Chart.register(LineController,CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
+Chart.register(BarElement, ArcElement, LineController,CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
 const Table = () => {
     const [temperatura, setTemperatura] = useState([]);
@@ -150,7 +153,9 @@ const Table = () => {
         datasets: [
             {
                 label: "Valor de Contador",
-                data: contador.map(data => data.valor.toFixed(1)),
+                data: contador.map(data => {
+                    const valor = data.valor;
+                    return typeof valor === "number" ? valor.toFixed(1) : 0; }),
                 borderColor: 'rgba(255, 206, 86, 1)',
                 backgroundColor: 'rgba(255, 206, 86, 0.2)',
                 borderWidth: 2,
@@ -171,7 +176,7 @@ const Table = () => {
 
     return(
         <>
-            <div>
+            <div className={estilos.rolagem}>
                 <h1>Dados de Temperatura</h1>
                 <div>
                     <Line data={chartDataTemperatura} options={{responsive: true}} />
@@ -189,7 +194,7 @@ const Table = () => {
 
                 <h1>Dados do Contador</h1>
                 <div>
-                    <Bar data={chartDataContador} options={{responsive: true}}/>
+                    <Line data={chartDataContador} options={{responsive: true}}/>
                 </div>
             </div>
         </>

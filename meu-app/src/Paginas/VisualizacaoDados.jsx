@@ -8,6 +8,7 @@ export function VisualizacaoDados(){
             <Header/>
             <BarraNavegacao/>
             <Graficos/>
+            
         </>
     )
 }

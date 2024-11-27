@@ -22,7 +22,7 @@ export function Header(){
     }
 
     return(
-        <header>
+        <header className={estilos.header}>
             <button onClick={navigateHome} className={estilos.button}>
                 <i class="bi bi-house"></i>
             </button>

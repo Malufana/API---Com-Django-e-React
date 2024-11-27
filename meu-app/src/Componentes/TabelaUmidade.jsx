@@ -46,26 +46,28 @@ export function TabelaUmidade() {
     return(
         <div>
             <h1 className={estilos.h1}>UMIDADE</h1>
-            <table className={estilos.tabela}>  
-                <thead>
-                    <tr className={estilos.cabecalho}>
-                        <th>ID</th>
-                        <th>VALOR</th>
-                        <th>SENSOR_ID</th>
-                        <th>TIMESTAMP</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {umidade.map((umido) => (
-                        <tr key={umido.id} className={estilos.linha}>
-                            <td>{umido.id}</td>
-                            <td>{umido.valor}</td>
-                            <td>{umido.sensor_id}</td>
-                            <td>{umido.timestamp}</td>
+            <div className={estilos.rolagem}>
+                <table className={estilos.tabela}>  
+                    <thead>
+                        <tr className={estilos.cabecalho}>
+                            <th>ID</th>
+                            <th>VALOR</th>
+                            <th>SENSOR_ID</th>
+                            <th>TIMESTAMP</th>
                         </tr>
-                    ))}
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        {umidade.map((umido) => (
+                            <tr key={umido.id} className={estilos.linha}>
+                                <td>{umido.id}</td>
+                                <td>{umido.valor}</td>
+                                <td>{umido.sensor_id}</td>
+                                <td>{umido.timestamp}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
         </div>
     )
 }

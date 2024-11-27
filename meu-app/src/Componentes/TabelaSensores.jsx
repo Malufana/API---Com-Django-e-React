@@ -18,7 +18,7 @@ export function TabelaSensores(){
             try{
                 const response = await axios.get("http://127.0.0.1:8000/api/sensores/", {
                     headers: {
-                        Authorization: `Bearer: ${token}`,
+                        Authorization: `Bearer ${token}`,
                     },
                 });
                 setSensores(response.data);
@@ -46,37 +46,36 @@ export function TabelaSensores(){
     return(
         <div>
             <h1 className={estilos.h1}>SENSORES</h1>
-            <table className={estilos.tabela}> 
-                <thead>
-                    <tr className={estilos.cabecalho}>
-                        <th>ID</th>
-                        <th>MAC ADDRESS</th>
-                        <th>LATITUDE</th>
-                        <th>LONGITUDE</th>
-                        <th>LOCALIZAÇÃO</th>
-                        <th>RESPONSAVEL</th>
-                        <th>UNIDADE DE MEDIDA</th>
-                        <th>STATUS OPERACIONAL</th>
-                        <th>OBSERVAÇÃO</th>
-                        <th>TIPO</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {sensores.map((sensor) => (
-                        <tr key={sensor.id} className={estilos.linha}>
-                            <td>{sensor.mac_address}</td>
-                            <td>{sensor.latitude}</td>
-                            <td>{sensor.longitude}</td>
-                            <td>{sensor.localizacao}</td>
-                            <td>{sensor.responsavel}</td>
-                            <td>{sensor.unidade_medida}</td>
-                            <td>{sensor.status_operacional}</td>
-                            <td>{sensor.observacao}</td>
-                            <td>{sensor.tipo}</td>
+            <div className={estilos.rolagem}>
+                <table className={estilos.tabela}> 
+                    <thead>
+                        <tr className={estilos.cabecalho}>
+                            <th>ID</th>
+                            <th>LATITUDE</th>
+                            <th>LONGITUDE</th>
+                            <th>LOCALIZAÇÃO</th>
+                            <th>RESPONSAVEL</th>
+                            <th>UNIDADE DE MEDIDA</th>
+                            <th>OBSERVAÇÃO</th>
+                            <th>TIPO</th>
                         </tr>
-                    ))}
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        {sensores.map((sensor) => (
+                            <tr key={sensor.id} className={estilos.linha}>
+                                <td>{sensor.id}</td>
+                                <td>{sensor.latitude}</td>
+                                <td>{sensor.longitude}</td>
+                                <td>{sensor.localizacao}</td>
+                                <td>{sensor.responsavel}</td>
+                                <td>{sensor.unidade_medida}</td>
+                                <td>{sensor.observacao}</td>
+                                <td>{sensor.tipo}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
         </div>
     )
 }

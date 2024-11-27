@@ -48,26 +48,28 @@ export function TabelaLuminosidade(){
     return(
         <div>
             <h1 className={estilos.h1}>LUMINOSIDADE</h1>
-            <table className={estilos.tabela}>
-                <thead>
-                    <tr className={estilos.cabecalho}>
-                        <th>ID</th>
-                        <th>VALOR</th>
-                        <th>SENSOR_ID</th>
-                        <th>TIMESTAMP</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {luminosidade.map((luz) => (
-                    <tr key={luz.id} className={estilos.linha}>
-                        <td>{luz.id}</td>
-                        <td>{luz.valor}</td>
-                        <td>{luz.sensor_id}</td>
-                        <td>{luz.timestamp}</td>
-                    </tr>
-                    ))}
-                </tbody>
-            </table>
+            <div className={estilos.rolagem}>
+                <table className={estilos.tabela}>
+                    <thead>
+                        <tr className={estilos.cabecalho}>
+                            <th>ID</th>
+                            <th>VALOR</th>
+                            <th>SENSOR_ID</th>
+                            <th>TIMESTAMP</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {luminosidade.map((luz) => (
+                        <tr key={luz.id} className={estilos.linha}>
+                            <td>{luz.id}</td>
+                            <td>{luz.valor}</td>
+                            <td>{luz.sensor_id}</td>
+                            <td>{luz.timestamp}</td>
+                        </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
         </div>
     )
 }
