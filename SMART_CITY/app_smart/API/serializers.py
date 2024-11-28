@@ -16,6 +16,11 @@ class UserSerializer(serializers.ModelSerializer):
         extra_kwargs = {'password': {'write_only': True}}
 
 
+# class CreateSensorSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = Sensor
+#         fields = ['id', 'tipo', 'mac_address', 'latitude', 'longitude', 'localizacao', 'responsavel', 'unidade_medida', 'status_operacional', 'observacao']
+
 class SensorSerializer(serializers.ModelSerializer):
     class Meta:
         model = Sensor

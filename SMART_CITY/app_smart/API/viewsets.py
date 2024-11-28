@@ -19,7 +19,7 @@ class CreateUserAPIViewSet(generics.CreateAPIView):
 class SensorViewSet(viewsets.ModelViewSet):
     queryset = Sensor.objects.all()
     serializer_class = serializers.SensorSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    # permission_classes = [permissions.IsAuthenticated]
     filter_backends = [DjangoFilterBackend]
     filterset_class = SensorFilter
 

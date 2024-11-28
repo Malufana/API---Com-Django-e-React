@@ -15,6 +15,9 @@ from django.core.files.storage import default_storage
 from rest_framework.decorators import api_view
 import uuid
 # import authenticate
+# from API.serializers import CreateSensorSerializer
+# from rest_framework.response import Response
+# from rest_framework import status
 
 logging.basicConfig(
     level=logging.DEBUG,
@@ -22,6 +25,19 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+# @api_view(['GET', 'POST'])
+# def criarSensor(request):
+#     if request.method == 'GET':
+#         queryset = Sensor.objects.all()
+#         serializer = CreateSensorSerializer(queryset, many=True)
+#         return Response(serializer.data)
+#     elif request.method == 'POST':
+#         serializer = CreateSensorSerializer(data = request.data)
+#         if serializer.is_valid():
+#             serializer.save()
+#             return Response(serializer.data, status=status.HTTP_201_CREATED)
+#         else:
+#             return Response(serializer.data, status=status.HTTP_400_BAD_REQUEST)
     
 def abre_index(request):
     mensagem = "OLÁ TURMA, SEJAM FELIZES SEMPRE!"

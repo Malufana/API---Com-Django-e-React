@@ -12,13 +12,14 @@ import { Sensores } from './Paginas/Sensores';
 import { Contador } from './Paginas/Contador';
 import { EnviarArquivos } from './Paginas/EnviarArquivos';
 import { VisualizacaoDados } from './Paginas/VisualizacaoDados';
+import { SensoresCriacao } from './Paginas/SensoresCriacao';
 
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Home />}/>
-        <Route path='/Login' element={<Login />}/>
+        <Route path='/Login' element={<Login/>}/>
         <Route path='/Temperatura' element={<Temperatura/>}/>
         <Route path='/Umidade' element={<Umidade/>}/>
         <Route path='/Luminosidade' element={<Luminosidade/>}/>
@@ -27,6 +28,7 @@ const App = () => {
         <Route path='/EnviarArquivos' element={<EnviarArquivos />}/>
         <Route path='/Novousuario' element={<NovoUsuario />}/>
         <Route path='/VisualizacaoDados' element={<VisualizacaoDados/>}/>
+        <Route path='/SensoresCriacao' element={<SensoresCriacao />}/>
       </Routes>
     </BrowserRouter>
   );

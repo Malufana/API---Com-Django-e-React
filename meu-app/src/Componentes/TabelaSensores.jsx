@@ -55,7 +55,6 @@ export function TabelaSensores(){
                             <th>LONGITUDE</th>
                             <th>LOCALIZAÇÃO</th>
                             <th>RESPONSAVEL</th>
-                            <th>UNIDADE DE MEDIDA</th>
                             <th>OBSERVAÇÃO</th>
                             <th>TIPO</th>
                         </tr>
@@ -68,7 +67,6 @@ export function TabelaSensores(){
                                 <td>{sensor.longitude}</td>
                                 <td>{sensor.localizacao}</td>
                                 <td>{sensor.responsavel}</td>
-                                <td>{sensor.unidade_medida}</td>
                                 <td>{sensor.observacao}</td>
                                 <td>{sensor.tipo}</td>
                             </tr>
