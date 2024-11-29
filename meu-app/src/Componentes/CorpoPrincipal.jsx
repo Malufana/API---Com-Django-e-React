@@ -22,6 +22,7 @@ export function CorpoPrincipal() {
                     <li className={estilos.listItem}><strong>Sensor de Temperatura:</strong> Monitora a temperatura em áreas específicas.</li>
                     <li className={estilos.listItem}><strong>Sensor de Luminosidade:</strong> Mede a intensidade da luz, útil para controle de iluminação.</li>
                     <li className={estilos.listItem}><strong>Sensor de Umidade:</strong> Avalia a umidade do ar, essencial para o monitoramento ambiental.</li>
+                    <li className={estilos.listItem}><strong>Sensor de Contador:</strong> Funciona com sensores de proximidade, indutivos, capacitivos.</li>
                 </ul>
             </section>
         </div>

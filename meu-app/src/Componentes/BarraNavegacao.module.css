@@ -1,10 +1,11 @@
-.navbar{
+.navbar {
     background-color: yellowgreen;
-    height: 50px;
-    align-items: center;
+    height: 60px; 
     display: flex;
-    justify-content: center;
-    margin-bottom: 5%;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 0 1rem; 
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .navbar a {

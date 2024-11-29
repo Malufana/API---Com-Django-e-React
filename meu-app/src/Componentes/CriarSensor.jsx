@@ -68,7 +68,7 @@ export function CriarSensor(){
 
 
             const sensorEspecificoData = {
-                sensor_id: sensorId,
+                sensor: sensorId,
                 valor,
                 timestamp
             };

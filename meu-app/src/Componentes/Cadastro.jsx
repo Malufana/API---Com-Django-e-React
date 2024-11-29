@@ -42,7 +42,7 @@ export function Cadastro(){
 
     return(
         <div className={estilos.container}>
-            <h2>Cadastro</h2>
+            <h2>Cadastro de Novo Usuário</h2>
             <form onSubmit={handleSubmit}>
                 <div className={estilos.form}>
                     <label>Nome de Usuário:</label>
