@@ -77,104 +77,106 @@ export function CsvUploadForm() {
   };
 
   return (
-    <div className={estilos.body}>
-      <form encType="multipart/form-data" className={estilos.form}>
-        
-        <h1>CSV UPLOAD</h1>
+    <body>
+      <div className={estilos.body}>
+        <form encType="multipart/form-data" className={estilos.form}>
+          
+          <h1>CSV UPLOAD</h1>
 
-        {/* <input type='hidden' name='csrfmiddlewaretoken' value="{{ csrf_token }}" /> */}
-        
-        <div className={estilos.uploadSection}>
-          <label htmlFor="sensor_csv">Upload Sensor CSV:</label>
-          <input
-            type="file"
-            name="sensor_csv"
-            id="sensor_csv"
-            onChange={(e) => handleFileChange(e, setSensorFile)}
-            className={estilos.input}
-          />
-          <button
-            type="submit"
-            onClick={(e) => handleSubmit(e, 'sensor', sensorFile)}
-            className={estilos.button}
-          >
-            Upload Sensor
-          </button>
-        </div>
+          {/* <input type='hidden' name='csrfmiddlewaretoken' value="{{ csrf_token }}" /> */}
+          
+          <div className={estilos.uploadSection}>
+            <label htmlFor="sensor_csv">Upload Sensor CSV:</label>
+            <input
+              type="file"
+              name="sensor_csv"
+              id="sensor_csv"
+              onChange={(e) => handleFileChange(e, setSensorFile)}
+              className={estilos.input}
+            />
+            <button
+              type="submit"
+              onClick={(e) => handleSubmit(e, 'sensor', sensorFile)}
+              className={estilos.button}
+            >
+              Upload Sensor
+            </button>
+          </div>
 
-        <div className={estilos.uploadSection}>
-          <label htmlFor="luminosidade_csv">Upload Luminosidade CSV:</label>
-          <input
-            type="file"
-            name="luminosidade_csv"
-            id="luminosidade_csv"
-            onChange={(e) => handleFileChange(e, setLuminosidadeFile)}
-            className={estilos.input}
-          />
-          <button
-            type="submit"
-            onClick={(e) => handleSubmit(e, 'luminosidade', luminosidadeFile)}
-            className={estilos.button}
-          >
-            Upload Luminosidade
-          </button>
-        </div>
+          <div className={estilos.uploadSection}>
+            <label htmlFor="luminosidade_csv">Upload Luminosidade CSV:</label>
+            <input
+              type="file"
+              name="luminosidade_csv"
+              id="luminosidade_csv"
+              onChange={(e) => handleFileChange(e, setLuminosidadeFile)}
+              className={estilos.input}
+            />
+            <button
+              type="submit"
+              onClick={(e) => handleSubmit(e, 'luminosidade', luminosidadeFile)}
+              className={estilos.button}
+            >
+              Upload Luminosidade
+            </button>
+          </div>
 
-        <div className={estilos.uploadSection}>
-          <label htmlFor="temperatura_csv">Upload Temperatura CSV:</label>
-          <input
-            type="file"
-            name="temperatura_csv"
-            id="temperatura_csv"
-            onChange={(e) => handleFileChange(e, setTemperaturaFile)}
-            className={estilos.input}
-          />
-          <button
-            type="submit"
-            onClick={(e) => handleSubmit(e, 'temperatura', temperaturaFile)}
-            className={estilos.button}
-          >
-            Upload Temperatura
-          </button>
-        </div>
+          <div className={estilos.uploadSection}>
+            <label htmlFor="temperatura_csv">Upload Temperatura CSV:</label>
+            <input
+              type="file"
+              name="temperatura_csv"
+              id="temperatura_csv"
+              onChange={(e) => handleFileChange(e, setTemperaturaFile)}
+              className={estilos.input}
+            />
+            <button
+              type="submit"
+              onClick={(e) => handleSubmit(e, 'temperatura', temperaturaFile)}
+              className={estilos.button}
+            >
+              Upload Temperatura
+            </button>
+          </div>
 
-        <div className={estilos.uploadSection}>
-          <label htmlFor="umidade_csv">Upload Umidade CSV:</label>
-          <input
-            type="file"
-            name="umidade_csv"
-            id="umidade_csv"
-            onChange={(e) => handleFileChange(e, setUmidadeFile)}
-            className={estilos.input}
-          />
-          <button
-            type="submit"
-            onClick={(e) => handleSubmit(e, 'umidade', umidadeFile)}
-            className={estilos.button}
-          >
-            Upload Umidade
-          </button>
-        </div>
+          <div className={estilos.uploadSection}>
+            <label htmlFor="umidade_csv">Upload Umidade CSV:</label>
+            <input
+              type="file"
+              name="umidade_csv"
+              id="umidade_csv"
+              onChange={(e) => handleFileChange(e, setUmidadeFile)}
+              className={estilos.input}
+            />
+            <button
+              type="submit"
+              onClick={(e) => handleSubmit(e, 'umidade', umidadeFile)}
+              className={estilos.button}
+            >
+              Upload Umidade
+            </button>
+          </div>
 
-        <div className={estilos.uploadSection}>
-          <label htmlFor="contador_csv">Upload Contador CSV:</label>
-          <input
-            type="file"
-            name="contador_csv"
-            id="contador_csv"
-            onChange={(e) => handleFileChange(e, setContadorFile)}
-            className={estilos.input}
-          />
-          <button
-            type="submit"
-            onClick={(e) => handleSubmit(e, 'contador', contadorFile)}
-            className={estilos.button}
-          >
-            Upload Contador
-          </button>
-        </div>
-      </form>
-    </div>
+          <div className={estilos.uploadSection}>
+            <label htmlFor="contador_csv">Upload Contador CSV:</label>
+            <input
+              type="file"
+              name="contador_csv"
+              id="contador_csv"
+              onChange={(e) => handleFileChange(e, setContadorFile)}
+              className={estilos.input}
+            />
+            <button
+              type="submit"
+              onClick={(e) => handleSubmit(e, 'contador', contadorFile)}
+              className={estilos.button}
+            >
+              Upload Contador
+            </button>
+          </div>
+        </form>
+      </div>
+    </body>
   );
 }
 

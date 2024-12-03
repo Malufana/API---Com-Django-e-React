@@ -40,39 +40,53 @@ export function Cadastro(){
         }
     }
 
+    // if(error){
+    //     return <div>
+    //         {error && (
+    //             <div className={estilos.cardErro}>
+    //                 <h2>ERRO</h2>
+    //                 <p>{error}</p>
+    //             </div>
+    //         )}
+    //     </div>
+    // }
+
     return(
-        <div className={estilos.container}>
-            <h2>Cadastro de Novo Usuário</h2>
-            <form onSubmit={handleSubmit}>
-                <div className={estilos.form}>
-                    <label>Nome de Usuário:</label>
-                    <input
-                        type="text"
-                        value={username}
-                        onChange={(e) => setUsername(e.target.value)}
-                        required
-                    />
-                </div>
-                <div className={estilos.form}>
-                    <label>Email:</label>
-                    <input
-                        type="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        required
-                    />
-                </div>
-                <div className={estilos.form}>
-                    <label>Senha:</label>
-                    <input
-                        type="password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        required
-                    />
-                </div>
-                <button type="submit">Cadastrar</button>
-            </form>
-        </div>
+        <body>
+            <div className={estilos.container}>
+                <h2>Cadastro de Novo Usuário</h2>
+                <form onSubmit={handleSubmit}>
+                    <div className={estilos.form}>
+                        <label>Nome de Usuário:</label>
+                        <input
+                            type="text"
+                            value={username}
+                            onChange={(e) => setUsername(e.target.value)}
+                            required
+                        />
+                    </div>
+                    <div className={estilos.form}>
+                        <label>Email:</label>
+                        <input
+                            type="email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            required
+                        />
+                    </div>
+                    <div className={estilos.form}>
+                        <label>Senha:</label>
+                        <input
+                            type="password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            required
+                        />
+                    </div>
+                    <button type="submit">Cadastrar</button>
+                </form>
+            </div>
+        </body>
+        
     )
 }

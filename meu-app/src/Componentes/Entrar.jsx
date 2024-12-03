@@ -43,33 +43,36 @@ export function Entrar(){
     }
 
     return(
-        <div className={estilos.login_container}>
-            <form className={estilos.login_form} onSubmit={handleSubmit}>
-                <h2>LOGIN</h2>
-                <div className={estilos.input}>
-                    <label>Username</label>
-                    <input 
-                        type="text" 
-                        id='username' 
-                        name='username' 
-                        value={username} 
-                        onChange={(e) => setUsername(e.target.value)}
-                        required
-                        />
-                </div>
-                <div className={estilos.input}>
-                    <label>Password</label>
-                    <input 
-                        type="password" 
-                        id='password' 
-                        name='password' 
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        required/>
-                </div>
-                <button type='submit'>Login</button>
-                <p className={estilos.signup}>Faça seu <a onClick={navigateCriar}>Cadastro</a></p>
-            </form>
-        </div>
+        <body>
+            <div className={estilos.login_container}>
+                <form className={estilos.login_form} onSubmit={handleSubmit}>
+                    <h2>LOGIN</h2>
+                    <div className={estilos.input}>
+                        <label>Username</label>
+                        <input 
+                            type="text" 
+                            id='username' 
+                            name='username' 
+                            value={username} 
+                            onChange={(e) => setUsername(e.target.value)}
+                            required
+                            />
+                    </div>
+                    <div className={estilos.input}>
+                        <label>Password</label>
+                        <input 
+                            type="password" 
+                            id='password' 
+                            name='password' 
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            required/>
+                    </div>
+                    <button type='submit'>Login</button>
+                    <p className={estilos.signup}>Faça seu <a onClick={navigateCriar}>Cadastro</a></p>
+                </form>
+            </div>
+        </body>
+        
     )
 }

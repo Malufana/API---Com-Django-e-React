@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-!gi06^+_dlo^q1+%npk76jafd4r*^@*l@m^ctns37bhmw5!@8b
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['Malufana.pythonanywhere.com']
+ALLOWED_HOSTS = ['Malufana.pythonanywhere.com', "127.0.0.1", 'localhost']
 
 
 # Application definition
@@ -144,6 +144,24 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOW_ALL_ORIGINS = True
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "http://127.0.0.1:8000",
+]
+
+CORS_ALLOW_HEADERS = [
+    'content-type',
+    'authorization',
+]
+
+CORS_ALLOW_METHODS = [
+    'GET',
+    'POST',
+    'PUT',
+    'DELETE',
+    'OPTIONS',
+]
 
 MEDIA_URL = '/media/'
 

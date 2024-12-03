@@ -1,5 +1,5 @@
 .container {
-    padding: 40px;
+    /* padding: 40px; */
     font-family: 'Arial, sans-serif';
     background-color: #f4f4f9;
     color: #333;
@@ -18,6 +18,11 @@
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section:hover{
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
 .sub {
